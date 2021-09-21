@@ -43,19 +43,31 @@ const getRatingDivElement = (title, rating) => {
 const getInnerHTML = (imdbRating, rottenTomatoRating) => {
     const innerHTML = `
     <div>
-    <p style="background-color: red;
-        z-index: 2;
-        margin-top: 0px;
-        position: absolute;
-        top:0; right:0;"
-    >IMDB: ${imdbRating}</p>
-    <p style="background-color: red;
-    z-index: auto;
-    margin-top: 0px;
-    position: absolute;
-    top:0; left:0;"
->Rotten Tomato: ${rottenTomatoRating}</p>
-    </div>
+    <p>
+    <span style = "box-sizing: border-box;
+    display: inline-block;
+    background-color: #E50914;
+    color: #ffffff;
+    border-radius: 3rem;
+    text-align: center;
+    font-size: 120%;
+    font-weight: 400;
+    padding: 0.05rem 0.8rem 0.1rem;
+    line-height: inherit;
+    float: left">
+    IMDB - ${imdbRating} </span>
+    
+    <span style = "box-sizing: border-box;
+    background-color: #E50914;
+    color: #ffffff;
+    border-radius: 3rem;
+    text-align: center;
+    font-size: 120%;
+    font-weight: 400;
+    padding: 0.05rem 0.8rem 0.1rem;
+    float: right;
+    line-height: inherit;"> RT - ${rottenTomatoRating} </span>
+    </p>
     `;
 
     return innerHTML;
@@ -78,15 +90,14 @@ const addRatingsToTile = async (movieTileElement) => {
 
     if (tileParent) {
         tileParent.appendChild(getRatingDivElement('IMDB', ratings.imdbRating));
-        tileParent.appendChild(
-            getRatingDivElement('Rotten Tomato', ratings.rottenTomato)
+        tileParent.appendChild(getRatingDivElement('Rotten Tomato', ratings.rottenTomato)
         );
     }
 };
 
 const induceDelay = (elem, callback) => {
     elem.onmouseover = () => {
-        setTimeout(() => callback(elem), 2000);
+        setTimeout(() => callback(elem), 500);
     };
 };
 
