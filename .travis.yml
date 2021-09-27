@@ -2,9 +2,13 @@ language: node_js
 node_js:
   - "8"
 cache: yarn
-script:
-  - echo 'Build starts!!'
-  - echo 'Installing Deps!'
-  - yarn
-  - echo 'Testing!'
-  - npm run test
+jobs:
+  include:
+    - stage: test
+      script:
+        - echo 'CI/CD'
+        - echo 'Installing dependencies!'
+        - yarn
+        - echo 'Testing!'
+        # Perform tests below;
+        # - npm run test
