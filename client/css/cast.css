@@ -1,6 +1,5 @@
 .cast-div {
     position: fixed;
-<<<<<<< HEAD
     top: 0%;
     right: 0%;
     height: 85%;
@@ -15,25 +14,9 @@
 
 .cast {
     padding: 10%;
-=======
-    top: 300px;
-    right: 200px;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-.cast-list {
-    margin: 5px;
-}
-
-.cast {
-    padding: 20px
->>>>>>> d48fcb7 (Adding cast details in the watch screen)
 }
 
 .cast-text {
     color: rgba(255, 255, 255);
-<<<<<<< HEAD
     font-size: 150%;
-=======
->>>>>>> d48fcb7 (Adding cast details in the watch screen)
 }
