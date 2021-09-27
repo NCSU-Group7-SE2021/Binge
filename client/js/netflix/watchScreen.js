@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 
 const CAST = 'actors';
+=======
+>>>>>>> d48fcb7 (Adding cast details in the watch screen)
 function createCastList(casts){
     let castList = document.createElement('ol');
     castList.className = "cast-list"
@@ -27,6 +30,7 @@ function listAlreadyExists(){
 
 function addToWatchScreen(casts){
     if(!listAlreadyExists()){
+<<<<<<< HEAD
         let castDiv = document.getElementsByClassName('ltr-fntwn3')
         castDiv[0].appendChild(createCastDiv(casts))    
     }    
@@ -115,6 +119,20 @@ var mutationObserver = new MutationObserver(function(mutations) {
             const casts = getCastDetails1(title);
             console.log("printing cast details ", casts);
             console.log(typeof(casts));
+=======
+        let watchDiv = document.getElementsByClassName('ltr-fntwn3')
+        watchDiv[0].appendChild(createCastDiv(casts))    
+    }    
+}
+
+casts = ["Salmon Bhoi", "ShehRakh Khon", "Amor Khon"]
+
+// addToWatchScreen(casts)
+
+var mutationObserver = new MutationObserver(function(mutations) {
+    mutations.forEach(function(mutation) {
+        if(mutation.target.className === 'active ltr-fntwn3'){
+>>>>>>> d48fcb7 (Adding cast details in the watch screen)
             addToWatchScreen(casts)
         }
         else if(mutation.target.className == 'inactive ltr-fntwn3'){
