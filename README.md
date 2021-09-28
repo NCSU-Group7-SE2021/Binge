@@ -7,7 +7,8 @@
 # Binge
 <p align="center">
 
-[![License](https://img.shields.io/github/license/NCSU-Group7-SE2021/Binge)](https://github.com/NCSU-Group7-SE2021/Binge/blob/main/LICENSE) [![DOI](https://zenodo.org/badge/408013649.svg)](https://zenodo.org/badge/latestdoi/408013649)
+[![License](https://img.shields.io/github/license/NCSU-Group7-SE2021/Binge)](https://github.com/NCSU-Group7-SE2021/Binge/blob/main/LICENSE)
+[![DOI](https://zenodo.org/badge/408013649.svg)](https://zenodo.org/badge/latestdoi/408013649)
 
 </p>
 
