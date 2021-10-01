@@ -78,16 +78,26 @@ const extractReview = async (reviewsArray) => {
 const fetchReviews = async (imdbId) => {
   // we will add functionality for user to give their keys using popup.html
   // we can discuss scope. we can do it or it can be added as future scope.
-  let reviews = [];
+  let reviews = [
+    {
+      publisher: "",
+      review: ""
+    }
+  ];
+
   let imdbApiKey = (await getImdbApiKeyFromStorage()) || "k_0afyx7ti";
-  // let imdbApiKey = 'k_gea4slmo';
+
   try {
     const imdbResponse = await fetch(
       encodeURI(`https://imdb-api.com/en/API/MetacriticReviews/${imdbApiKey}/${imdbId}`)
     );
 
     const imdbResponseJson = await imdbResponse.json();
-    if (imdbResponseJson["errorMessage"] && imdbResponseJson["errorMessage"] === SERVER_BUSY) {
+
+    if (
+      imdbResponseJson["errorMessage"] &&
+      (imdbResponseJson["errorMessage"] === SERVER_BUSY || imdbResponseJson["errorMessage"] != null)
+    ) {
       console.log("IMDB unable to find metacritic reviews for the given movie " + imdbId);
     } else {
       reviews = extractReview(imdbResponseJson);
