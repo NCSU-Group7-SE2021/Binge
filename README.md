@@ -30,8 +30,6 @@ About 60% of the users look out for details like ratings, people's reviews, crit
 
 '**BINGE**' - is a `Google Chrome Extension` which provides information about ratings, reviews, trivia, cast details etc on the home and watch screen of the video streaming platform. This saves a lot of time and effort for the users and provides a one stop place to get quick access to required information about the content. 
 
-
-
 ## Table of Content
 1. [Features](#features-what-you-get)
 2. [Installation](#installation)
@@ -46,8 +44,12 @@ About 60% of the users look out for details like ratings, people's reviews, crit
 
 1. IMDB Ratings
 2. Rotten Tomatoes
-3. Review
-4. Trivia
+![IMDB and Rotten Tomato ratings](./client/assets/images/ratings.png)
+3. Metacritic Reviews
+![IMDB and Rotten Tomato ratings](./client/assets/images/ratings_and_reviews.png)
+4. Cast Information
+![IMDB and Rotten Tomato ratings](./client/assets/images/cast_info.png)
+
 
 ## What you can expect in future
 
