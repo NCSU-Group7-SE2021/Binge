@@ -20,15 +20,15 @@ Homeworks!<br />
 Assignment!<br />
 Projects!<br />
 
-We all got to take break. Have you ever been tired and wished to **NETFLIX & CHILL**. <br />
-Did you go waste the time choosing what to watch till your food went cold? <br />
-This new extension aims to provide quality and essential information about the video contents to the users which will help them get the best streaming experience. <br />
+We all got to take a break. Have you ever been tired and wished to **NETFLIX & CHILL**. <br />
+Did you go and waste your time choosing what to watch till your food went cold? <br />
+This new extension aims to provide quality and essential information about the video contents to the users that will help them get the best streaming experience. <br />
 
-About 60% of the users look out for details like ratings, people's reviews, critic's reviews and cast information before deciding to watch a movie or series.
+Alot of users look out for details like ratings, people's reviews, critic's reviews and cast information before deciding to watch a movie or series.
 
 [comment]: <Although each of the streaming platform provides some suggestions based on peer likeability, user's watch pattern and their sophisticated recommendation engines, most of them don't serve some critical information available on the internet. Some common platforms like IMDB, Rotten Tomatoes still have a reputable rating and review mechanism which the world looks out for.>
 
-'**BINGE**' - is a `Google Chrome Extension` which provides information about ratings, reviews, trivia, cast details etc on the home and watch screen of the video streaming platform. This saves a lot of time and effort for the users and provides a one stop place to get quick access to required information about the content. 
+'**BINGE**' - is a `Google Chrome Extension` which provides information about ratings, reviews, trivia, cast details etc on the home and watch screen of video streaming platforms. This saves a lot of time and effort for the users and acts as a one stop place to get quick access to required information about the content. 
 
 ## Table of Content
 1. [Features](#features-what-you-get)
