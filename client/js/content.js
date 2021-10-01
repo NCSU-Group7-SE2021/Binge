@@ -1,8 +1,8 @@
 // const RATINGS = 'ratings';
 
 function getTitleFromCard(elem) {
-    const title = elem.firstElementChild.innerText;
-    return title || '';
+  const title = elem.firstElementChild.innerText;
+  return title || "";
 }
 
 // const getRatings = async (title) => {
@@ -35,13 +35,13 @@ function getTitleFromCard(elem) {
 // }
 
 const getRatingDivElement = (title, rating) => {
-    const div = document.createElement('div');
-    div.innerHTML = `${title} rating: ${rating}`;
-    return div;
+  const div = document.createElement("div");
+  div.innerHTML = `${title} rating: ${rating}`;
+  return div;
 };
 
 const getInnerHTML = (imdbRating, rottenTomatoRating) => {
-    const innerHTML = `
+  const innerHTML = `
     <div>
     <p style="background-color: red;
         z-index: 2;
@@ -58,39 +58,34 @@ const getInnerHTML = (imdbRating, rottenTomatoRating) => {
     </div>
     `;
 
-    return innerHTML;
+  return innerHTML;
 };
 
 const addRatingsToTile = async (movieTileElement) => {
-    const videoTitle = getTitleFromCard(movieTileElement);
-    const tileParent = document.querySelector(
-        '.previewModal--metadatAndControls-container'
-    );
-    const ratings = await getRatings(videoTitle);
+  const videoTitle = getTitleFromCard(movieTileElement);
+  const tileParent = document.querySelector(".previewModal--metadatAndControls-container");
+  const ratings = await getRatings(videoTitle);
 
-    if (!movieTileElement.hasAttribute('ratings')) {
-        movieTileElement.insertAdjacentHTML(
-            'afterend',
-            getInnerHTML(ratings.imdbRating, ratings.rottenTomato)
-        );
-        movieTileElement.setAttribute('ratings', ratings);
-    }
+  if (!movieTileElement.hasAttribute("ratings")) {
+    movieTileElement.insertAdjacentHTML("afterend", getInnerHTML(ratings.imdbRating, ratings.rottenTomato));
+    movieTileElement.setAttribute("ratings", ratings);
+  }
 };
 
 const induceDelay = (elem, callback) => {
-    elem.onmouseover = () => {
-        setTimeout(() => callback(elem), 2000);
-    };
+  elem.onmouseover = () => {
+    setTimeout(() => callback(elem), 2000);
+  };
 };
 
 const observeChangesInDom = async () => {
-    const netflixAllTitles = document.querySelectorAll('[id^="title-"]');
-    getTitleAndDateFromModal()
-    for (title of netflixAllTitles) {
-        const elem = title.firstChild;
-        induceDelay(elem, addRatingsToTile);
-    }
-    setTimeout(observeChangesInDom, 500);
+  const netflixAllTitles = document.querySelectorAll('[id^="title-"]');
+  getTitleAndDateFromModal();
+  for (title of netflixAllTitles) {
+    const elem = title.firstChild;
+    induceDelay(elem, addRatingsToTile);
+  }
+  setTimeout(observeChangesInDom, 500);
 };
 
 observeChangesInDom();
