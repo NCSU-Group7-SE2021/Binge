@@ -30,6 +30,9 @@ Alot of users look out for details like ratings, people's reviews, critic's revi
 
 '**BINGE**' - is a `Google Chrome Extension` which provides information about ratings, reviews, trivia, cast details etc on the home and watch screen of video streaming platforms. This saves a lot of time and effort for the users and acts as a one stop place to get quick access to required information about the content. 
 
+## Click to Play
+[![Intro Video](./client/assets/images/intro.jpeg)](https://youtu.be/gagDevLB8BE)
+
 ## Table of Content
 1. [Features](#features-what-you-get)
 2. [Installation](#installation)
